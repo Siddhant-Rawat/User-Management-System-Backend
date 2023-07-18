@@ -20,6 +20,11 @@ public class UserController {
 		return userRepository.save(newUser);
 	}
 
+	@GetMapping("/users/test")
+	String test() {
+		return "Testing AWS";
+	}
+
 	@GetMapping("/users")
 	List<User> getAllUsers() {
 		return userRepository.findAll();
